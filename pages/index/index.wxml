@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+<input placeholder="请输入运单号" bindinput='input'/>
+<button type="primary" bindtap='btnClick'> 查询 </button>
+<scroll-view scroll-y="true" style='height: 300px;'>
+  <view wx:for="{{expressInfo.result.list}}">
+      {{item.status}} 【{{item.time}}】
+  </view>
+</scroll-view>
+   
+</view>
